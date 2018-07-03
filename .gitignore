@@ -3,5 +3,5 @@
 *.iml
 target/
 application.properties
-twitter4j.properties
+
 
