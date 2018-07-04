@@ -2,6 +2,8 @@ package AnaylzeMyFace.Controller;
 
 import AnaylzeMyFace.Model.DetectedFaces;
 import AnaylzeMyFace.Service.AMFService;
+import com.ibm.watson.developer_cloud.http.ServiceCall;
+import com.ibm.watson.developer_cloud.visual_recognition.v3.model.DetectFacesOptions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -14,8 +16,8 @@ public class AMFController {
     AMFService amfService;
 
     @RequestMapping("/")
-    public DetectedFaces faceFacts(@RequestParam(value="url") String url){
-        return amfService.faceFacts(url);
+    public com.ibm.watson.developer_cloud.visual_recognition.v3.model.DetectedFaces faceFacts(@RequestParam(value="url") String url){
+        return  amfService.faceFacts(url);
     }
 
 }
