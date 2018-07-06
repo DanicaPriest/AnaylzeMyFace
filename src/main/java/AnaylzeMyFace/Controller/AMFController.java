@@ -12,18 +12,19 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping("analyzemyface/")
+@RequestMapping("/analyzemyface")
 public class AMFController {
     @Autowired
     AMFService amfService;
-    @RequestMapping("/")
+
+    @RequestMapping("/home")
     public ModelAndView home(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("home");
         return modelAndView;
     }
 
-    @RequestMapping("json/")
+    @RequestMapping("/json")
     public com.ibm.watson.developer_cloud.visual_recognition.v3.model.DetectedFaces faceFacts(@RequestParam(value="url") String url){
         return  amfService.faceFacts(url);
     }
