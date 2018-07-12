@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Analyze My Face</title>
 </head>
 <body>
 <form>
-    <input type="text" id="urlBox">Image URL </input>
+    <input type="text" id="urlBox" th:text="url">Image URL </input>
     <button type="submit">Analyze Me!</button>
 </form>
 </body>
