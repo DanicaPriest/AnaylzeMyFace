@@ -16,7 +16,7 @@ public class AMFController {
     @Autowired
     AMFService amfService;
 
-    @RequestMapping("/")
+    @RequestMapping("/home")
     public ModelAndView home(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("home");
