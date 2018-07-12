@@ -26,4 +26,5 @@ public class AMFService {
         DetectedFaces result = restTemplate.getForObject(url, DetectedFaces.class);*/
         return result;
     }
+   
 }
